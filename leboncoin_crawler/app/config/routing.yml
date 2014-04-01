@@ -1,0 +1,4 @@
+crawlerlbccrawler:
+    resource: "@crawlerlbccrawlerBundle/Resources/config/routing.yml"
+    prefix:   /
+

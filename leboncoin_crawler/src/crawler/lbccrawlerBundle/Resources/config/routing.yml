@@ -1,0 +1,19 @@
+crawlerlbccrawler_homepage:
+    pattern:  /
+    defaults: { _controller: crawlerlbccrawlerBundle:Default:showAll }
+
+crawlerlbccrawler_parse:
+    pattern:  /parse
+    defaults: { _controller: crawlerlbccrawlerBundle:Default:index }
+
+crawlerlbccrawler_detail:
+    pattern: /detail/{id}
+    defaults: { _controller: crawlerlbccrawlerBundle:Default:detail }
+
+crawlerlbccrawler_remove:
+    pattern: /remove/{id}
+    defaults: { _controller: crawlerlbccrawlerBundle:Default:remove }
+
+crawlerlbccrawler_sendAds:
+    pattern: /sendAds
+    defaults: { _controller: crawlerlbccrawlerBundle:Default:sendAds }

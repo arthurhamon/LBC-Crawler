@@ -1,0 +1,14 @@
+{% extends app.request.isxmlhttprequest ? "::ajax.html.twig" : "::base.html.twig" %}
+
+{% block body %}
+
+
+<p>{{ad.title}} | <strong>{{ad.price}}</strong></p>
+<p>{{ad.description|raw}}</p>
+{% for image in ad.images if image.size == "b" %}
+	<img src="{{image.url}}" alt="{{image.size}}">
+{% endfor %}
+
+
+
+{% endblock %}

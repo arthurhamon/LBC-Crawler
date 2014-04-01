@@ -1,0 +1,15 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: lbc_crawler
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_port: 587
+    mailer_host: smtp.mandrillapp.com
+    mailer_user: paul.delespine@gmail.com
+    mailer_password: JYiKuqeU9LQaOa-r8O0CNQ
+    locale: en
+    secret: c813f2b7be4626981071361e58a988237
+    database_path: null

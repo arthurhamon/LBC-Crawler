@@ -1,0 +1,52 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<div class="container">
+	{% set compt = 1 %}
+
+	{% for ad in ads %}
+
+		{% if compt == 1 %}
+			<div class="row">
+		{% endif %}
+
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail">
+					{% for image in ad.images if image.size == "b" %}
+						{% if loop.first %}
+							<img src="{{image.url}}" alt="{{image.size}}" style="width: 300px; height: 200px;">
+						{% endif %}
+					{% endfor %}
+
+					<div class="caption text-center">
+						<h3><a class="ad_link" href="{{ path('crawlerlbccrawler_detail', {'id': ad.id}) }}">{{ad.title}}</a></h3>
+						<p>{{ad.city}} - {{ad.zip}}</p>
+						<p>
+							<span class="btn btn-primary">{{ad.price|price}}</span>
+							<a class="btn btn-danger" role="button" href="{{ path('crawlerlbccrawler_remove', {'id': ad.id}) }}">Remove</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		{% set compt = compt + 1 %}
+
+
+		{% if compt is divisible by(5) %}
+			</div>
+			{% set compt = 1 %}
+		{% endif %}
+
+		{% if compt is divisible by(5) and loop.last == false %}
+			<div class="row">
+		{% elseif loop.last == true %}
+			</div>
+			{% set compt = 1 %}
+		{% endif %}
+
+	{% endfor %}
+</div>
+
+{% endblock %}
+

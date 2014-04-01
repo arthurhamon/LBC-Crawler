@@ -1,0 +1,7 @@
+parameters:
+#    crawlerlbccrawler.example.class: crawler\lbccrawlerBundle\Example
+
+services:
+#    crawlerlbccrawler.example:
+#        class: %crawlerlbccrawler.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
